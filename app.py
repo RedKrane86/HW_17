@@ -114,8 +114,8 @@ class MovieView(Resource):
         movie.trailer = req_json.get('trailer')
         movie.year = req_json.get('year')
         movie.rating = req_json.get('rating')
-        movie.genre_id = req_json.get('genre')
-        movie.director_id = req_json.get('director')
+        movie.genre_id = req_json.get('genre_id')
+        movie.director_id = req_json.get('director_id')
 
         db.session.add(movie)
         db.session.commit()
